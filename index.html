@@ -1,98 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <section class="top-banner">
-      <div class="container">
-        <h1 class="heading">Itenary for Cities</h1>
-      </div>
-  </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Itinerary Explorer</title>
+</head>
 
+<body>
+  <nav>
+    <div class="nav-wrapper blue">
+      <a href="#" class="brand-logo center">Itinerary Explorer</a>
+    </div>
+  </nav>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <!-- Google Fonts  -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Domine&display=swap"
-      rel="stylesheet"
-    />
+  <header class="top-banner">
+    <div class="container">
+      <h1 class="heading">Plan Your Dream Trip</h1>
+    </div>
+  </header>
 
-    <script src="https://use.fontawesome.com/b2df4848e1.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>Get Detailed Itenaries For Stays In Any City</title>
-  </head>
-  <body>
+  <main class="container">
+    <section class="input-section">
+      <h5 class="center">Let&apos;s Explore the World!</h5>
+            <form class="row" id="search-form">
+        <div class="input-field col s10">
+          <input
+            type="text"
+            id="city-input"
+            placeholder="Enter city, season, and days (e.g., Paris Summer 5)"
+            aria-label="Enter city name, season, and duration"
+          />
+        </div>
+        <div class="input-field col s2">
+          <button type="submit" class="btn waves-effect waves-light blue">
+            <i class="material-icons">search</i>
+          </button>
+        </div>
+      </form>
+    </section>
 
-    <!-- Body  -->
-    <div class="row">
-      <!-- Left Side  -->
-      <div class="col s12 m4">
-        <div class="container">
-          <!-- headeing  -->
-          <h5 class="font">Let's Explore The World!!</h5>
-
-          <!-- search  -->
-          <form>
-            <div class="input-field" style="width: 1200px; left: 0px; top: 0px;">
-              <div class="row input">
-                <div class="col s8 m8" style="margin-top: 5px;">
-                  <i class="prefix" aria-hidden="true"></i>
-                  <input
-                    type="text"
-                    id="icon_prefix"
-                    class="file-path validate"
-                    name="city"
-                    placeholder="Type city (space) Season you want to visit in (space) Number of days you want to stay in the city..." style="width: 1063px"
-                  />
-                </div>
-                <div class="col s4 m4" style="margin-top: 10px;">
-                  <button
-                    type="submit"
-                    class="btn btn-c transparent z-depth-0 grey-text"
-                  >
-                    <i class="fa fa-search" ></i>
-                  </button>
-                </div>
-              </div>
+    <section class="results-section">
+      <div id="spinner" style="display:none;" class="center">
+        <div class="preloader-wrapper active">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
             </div>
-          </form>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+        <div class="loading">
+          Loading...
         </div>
       </div>
-    </div>
-    <!-- End Search   -->
-    <!-- Card  -->
-    <div>
-      <div class="city-info">
-        <h5 class="description" ></h5>    
+      <div id="error-message" style="display:none; color: red; text-align: center;">
+        Failed to fetch itinerary. Please try again!
       </div>
-    </div>
-    <!-- End Card  -->
-        
-      
-    
+      <div id="results-container" class="card">
+        <div class="card-content">
+          <span class="card-title">Your Itinerary</span>
+          <div class="description"></div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="app.js"></script>
+</body>
 
-    <script src="app.js"></script>
-    <script src="bundle.js"></script>
-  </body>
 </html>

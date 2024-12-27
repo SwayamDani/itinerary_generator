@@ -33,31 +33,26 @@
   text-transform: capitalize;
 }
 
-.input {
+.city-input {
   border-radius: 15px;
   size: 50em;
   background-color: rgb(230, 230, 230);
   text-decoration: none;
 }
 
-input {
+.city-input {
   border-bottom: none !important;
   border-bottom: none !important;
+}
+
+.loading {
+  display: none;
+  
 }
 
 input:focus {
   border-bottom: none !important;
   box-shadow: none !important;
-}
-
-.footer {
-  position: none;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #333;
-  color: white;
-  text-align: center;
 }
 
 .container {
@@ -73,6 +68,10 @@ input:focus {
 .description {
   margin-left: 20px;
   color: #333;
+}
+
+.card-content {
+  display: none;
 }
 
 .fa.fa-search {
