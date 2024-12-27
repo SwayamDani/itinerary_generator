@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <section class="top-banner">
+      <div class="container">
+        <h1 class="heading">Itenary for Cities</h1>
+      </div>
+  </section>
+
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Google Fonts  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Domine&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://use.fontawesome.com/b2df4848e1.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Get Detailed Itenaries For Stays In Any City</title>
+  </head>
+  <body>
+
+    <!-- Body  -->
+    <div class="row">
+      <!-- Left Side  -->
+      <div class="col s12 m4">
+        <div class="container">
+          <!-- headeing  -->
+          <h5 class="font">Let's Explore The World!!</h5>
+
+          <!-- search  -->
+          <form>
+            <div class="input-field" style="width: 1200px; left: 0px; top: 0px;">
+              <div class="row input">
+                <div class="col s8 m8" style="margin-top: 5px;">
+                  <i class="prefix" aria-hidden="true"></i>
+                  <input
+                    type="text"
+                    id="icon_prefix"
+                    class="file-path validate"
+                    name="city"
+                    placeholder="Type city (space) Season you want to visit in (space) Number of days you want to stay in the city..." style="width: 1063px"
+                  />
+                </div>
+                <div class="col s4 m4" style="margin-top: 10px;">
+                  <button
+                    type="submit"
+                    class="btn btn-c transparent z-depth-0 grey-text"
+                  >
+                    <i class="fa fa-search" ></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End Search   -->
+    <!-- Card  -->
+    <div>
+      <div class="city-info">
+        <h5 class="description" ></h5>    
+      </div>
+    </div>
+    <!-- End Card  -->
+        
+      
+    
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="bundle.js"></script>
+  </body>
+</html>
