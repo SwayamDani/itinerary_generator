@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Itinerary Explorer</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper blue">
+      <a href="#" class="brand-logo center">Itinerary Explorer</a>
+    </div>
+  </nav>
+
+  <header class="top-banner">
+    <div class="container">
+      <h1 class="heading">Plan Your Dream Trip</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="input-section">
+      <h5 class="center">Let&apos;s Explore the World!</h5>
+            <form class="row" id="search-form">
+        <div class="input-field col s10">
+          <input
+            type="text"
+            id="city-input"
+            placeholder="Enter city, season, and days (e.g., Paris Summer 5)"
+            aria-label="Enter city name, season, and duration"
+          />
+        </div>
+        <div class="input-field col s2">
+          <button type="submit" class="btn waves-effect waves-light blue">
+            <i class="material-icons">search</i>
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section class="results-section">
+      <div id="spinner" style="display:none;" class="center">
+        <div class="preloader-wrapper active">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+        <div class="loading">
+          Loading...
+        </div>
+      </div>
+      <div id="error-message" style="display:none; color: red; text-align: center;">
+        Failed to fetch itinerary. Please try again!
+      </div>
+      <div id="results-container" class="card">
+        <div class="card-content">
+          <span class="card-title">Your Itinerary</span>
+          <div class="description"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>

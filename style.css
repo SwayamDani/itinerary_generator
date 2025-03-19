@@ -1,0 +1,132 @@
+.hero-img {
+  border-radius: 10px;
+}
+/* Navbar  */
+.brand-logo {
+  font-family: "Staatliches", cursive;
+}
+
+.btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-c {
+  border-radius: 7px;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #444;
+}
+
+.font {
+  font-family: "Domine", serif;
+}
+
+.font-c {
+  font-family: "Quicksand";
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.city-input {
+  border-radius: 15px;
+  size: 50em;
+  background-color: rgb(230, 230, 230);
+  text-decoration: none;
+}
+
+.city-input {
+  border-bottom: none !important;
+  border-bottom: none !important;
+}
+
+.loading {
+  display: none;
+  
+}
+
+input:focus {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.container {
+  width: 120%;
+  margin: auto;
+  overflow: show;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.description {
+  margin-left: 20px;
+  color: #333;
+}
+
+.card-content {
+  display: none;
+}
+
+.fa.fa-search {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Placeholder  */
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  padding-top: 5px;
+  color: grey;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  padding-top: 5px;
+  color: grey;
+  opacity: 1;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  padding-top: 5px;
+  color: grey;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  padding-top: 5px;
+  color: grey;
+}
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: grey;
+  padding-top: 5px;
+}
+
+::placeholder {
+  /* Most modern browsers support this now. */
+  color: grey;
+  padding-top: 5px;
+}
+
+.city-info {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
